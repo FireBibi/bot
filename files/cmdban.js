@@ -10,8 +10,8 @@ module.exports = (message, _client) => {
     let args = message.content.split(" ");
     let reason = args.slice(2).join(" ");
 
-    if (message.member.hasPermission('ADMINISTRATOR')){
-        if (message.content.startsWith(config.prefix + "ban")){
+    if (message.content.startsWith(config.prefix + "ban")){
+        if (message.member.hasPermission('ADMINISTRATOR')){ 
             message.delete();
             let mention = message.mentions.members.first();
 
